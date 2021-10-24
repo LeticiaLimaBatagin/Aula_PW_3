@@ -1,0 +1,87 @@
+{
+  "playlist": [
+    {
+      "adult": false,
+      "backdrop_path": "/dNQTwFmEj1b5SktT8oWGH5Cunlx.jpg",
+      "genre_ids": [
+        28,
+        12,
+        14
+      ],
+      "id": 566525,
+      "original_language": "en",
+      "original_title": "Shang-Chi and the Legend of the Ten Rings",
+      "overview": "Shang-Chi precisa confrontar o passado que pensou ter deixado para trás. Ao mesmo tempo, ele é envolvido em uma teia de mistérios da organização conhecida como Dez Anéis.",
+      "popularity": 1194.052,
+      "poster_path": "/ArrOBeio968bUuUOtEpKa1teIh4.jpg",
+      "release_date": "2021-09-02",
+      "title": "Shang-Chi e a Lenda dos Dez Anéis",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 1315
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eBGKU0ZLJmxtVtzESTB1mfllX1J.jpg",
+      "genre_ids": [
+        80,
+        28,
+        53
+      ],
+      "id": 630004,
+      "original_language": "en",
+      "original_title": "The Vault",
+      "overview": "Thom Laybrick é um jovem e brilhante engenheiro que dificilmente se atrai pelos projetos em que é chamado a participar. Mas ele diz sim quando o caçador de tesouros Walter o convida para se unir a um grupo de contraventores que pretendem realizar um assalto ao Banco da Espanha. Calculado em cada detalhe, o roubo se torna uma incessante luta contra o tempo para que consigam se dar bem em meio à Copa do Mundo em que a Espanha disputa a final.",
+      "popularity": 1026.196,
+      "poster_path": "/AhRSv4npEaE8ZvuJh4CmQpsXDZg.jpg",
+      "release_date": "2021-04-10",
+      "title": "Assalto ao Banco da Espanha",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 334
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fmIp40ev4VGquK2bMo52PQgaV2d.jpg",
+      "genre_ids": [
+        16,
+        10751,
+        12,
+        14,
+        35
+      ],
+      "id": 529203,
+      "original_language": "en",
+      "original_title": "The Croods: A New Age",
+      "overview": "Em Croods 2: Uma Nova Era, em busca de um habitat mais seguro, os Croods descobrem um paraíso que atende todas as suas necessidades. Entretanto, outras pessoas já moram neste lugar: Os Bettermans, uma família que se considera melhor e mais evoluída. À medida que as tensões entre os novos vizinhos começam a aumentar, uma nova ameaça impulsiona os dois clãs em uma aventura épica que os força abraçar suas diferenças, extrair forças um do outro e construir um futuro juntos.",
+      "popularity": 340.416,
+      "poster_path": "/vRTScutueW9gLF3dSo2Za7o0v7n.jpg",
+      "release_date": "2021-03-25",
+      "title": "Os Croods 2: Uma Nova Era",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 2590
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg",
+      "genre_ids": [
+        35,
+        28,
+        12,
+        878
+      ],
+      "id": 550988,
+      "original_language": "en",
+      "original_title": "Free Guy",
+      "overview": "Um caixa de banco preso a uma entediante rotina tem sua vida virada de cabeça para baixo quando ele descobre que é personagem em um brutalmente realista vídeo game de mundo aberto. Agora ele precisa aceitar sua realidade e lidar com o fato de que é o único que pode salvar o mundo.",
+      "popularity": 3519.504,
+      "poster_path": "/jXlGeLOg2RKHmV9CinVaIB4ijKU.jpg",
+      "release_date": "2021-08-19",
+      "title": "Free Guy: Assumindo o Controle",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 3044
+    }
+  ]
+}

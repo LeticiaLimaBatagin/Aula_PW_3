@@ -1,3 +1,4 @@
+import { IFilme } from './../models/IFilme.model';
 import { Injectable } from '@angular/core';
 
 import { HttpClient} from '@angular/common/http';
@@ -25,6 +26,22 @@ export class FilmesService {
   buscarFilmes(buscar: string): Observable<IListaFilmes>{
     const url = `${this.apiUrl}/search/movie?${this.language}&${this.region}&${this.key}&query=${buscar}`;
     return this.http.get<IListaFilmes>(url).pipe(
+      map(result => result),
+      catchError(erro => this.exibirErro(erro))
+    )
+  }
+
+  public addFilmeAPlaylist(filme: IFilme): Observable<IFilme>{
+    const url = 'http://localhost:3000/playlist';
+    return this.http.post<IFilme>(url, filme).pipe(
+      map(result => result),
+      catchError(erro => this.exibirErro(erro))
+    )
+  }
+
+  public getAPlaylist(): Observable<IFilme[]>{
+    const url = 'http://localhost:3000/playlist';
+    return this.http.get<IFilme[]>(url).pipe(
       map(result => result),
       catchError(erro => this.exibirErro(erro))
     )

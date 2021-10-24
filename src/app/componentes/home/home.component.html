@@ -1,3 +1,4 @@
+<br>
 <div class="input-group flex-nowrap">
   <span class="input-group-text" id="addon-wrapping">Buscar</span>
   <input
@@ -9,10 +10,13 @@
     [(ngModel)]="buscar"
     (ngModelChange)="filtrarFilmes()">
 </div>
+<br>
 <button type="button" class="btn btn-primary" (click)="listarFilmeAleatorio()" >Aleatório</button>
+<br>
+<br>
 <div class="row">
-  <div class="col-3 mb-3" *ngFor="let filme of listaDeFilmes.results">
-    <div class="card">
+  <div class="col-3 mb-3" *ngFor="let filme of listaDeFilmes">
+    <div class="card border-dark mb-3 p-3 ">
 
       <div *ngIf="filme.poster_path; then thenBlock else elseBlock"></div>
       <ng-template #thenBlock>
@@ -30,6 +34,10 @@
         <p class="card-text">{{filme.overview | slice:0:100}}</p>
         <a routerLink="/filme/{{filme.id}}" class="card-link">Ver mais ... </a>
       </div>
+      <button (click)="addAPlaylist(filme)" type="button" class="btn btn-outline-dark">
+        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+        Adicionar a Playlist
+      </button>
     </div>
   </div>
 

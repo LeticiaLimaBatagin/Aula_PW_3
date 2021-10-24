@@ -2,7 +2,7 @@ import { IFilme } from './IFilme.model';
 
 export interface IListaFilmes {
   page?: number;
-  results?: IFilme[];
+  results: IFilme[];
   total_results?: number;
   total_pages?: number;
 }

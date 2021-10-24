@@ -1,6 +1,8 @@
+import { IFilme } from './../../models/IFilme.model';
 import { FilmesService } from './../../services/filmes.service';
 import { Component, OnInit } from '@angular/core';
-import { IListaFilmes } from 'src/app/models/IListaFilmes.model';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -10,24 +12,46 @@ import { IListaFilmes } from 'src/app/models/IListaFilmes.model';
 export class HomeComponent implements OnInit {
 
   buscar: string = '';
-  public listaDeFilmes: IListaFilmes = {};
+  public listaDeFilmes?: IFilme[] = [];
 
-  constructor(private filmesService: FilmesService) {
+  constructor(
+    private filmesService: FilmesService,
+    private router: Router
+    ) {
   }
 
   ngOnInit(): void {
-    this.buscarFilmesPopulares();
+    if(this.router.url === '/playlist'){
+      this.getPlaylist();
+    }else{
+      this.buscarFilmesPopulares();
+    }
+  }
+
+  getPlaylist(): void{
+    this.filmesService.getAPlaylist().subscribe(listaDeFilmes =>{
+      this.listaDeFilmes = listaDeFilmes;
+    })
+  };
+
+  addAPlaylist(filme: IFilme): void{
+    this.filmesService.addFilmeAPlaylist(filme).subscribe(resposta => {
+      this.filmesService.exibirMensagens(
+      `Adicionado com Sucesso`,
+      `${resposta.title} , foi adicionado com sucesso a sua playlist.`,
+      `toast-success`);
+    })
   }
 
   buscarFilmes(filtro: string): void{
     this.filmesService.buscarFilmes(filtro).subscribe(retorno =>{
-      this.listaDeFilmes = retorno;
+      this.listaDeFilmes = retorno.results;
     });
   }
 
   buscarFilmesPopulares(): void{
     this.filmesService.listarPopulares().subscribe(result => {
-      this.listaDeFilmes = result;
+      this.listaDeFilmes = result.results;
     });
   }
 
